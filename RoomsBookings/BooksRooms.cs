@@ -13,11 +13,11 @@ namespace RoomsBookings
 
             int nTot = nAdults + nChildren;
 
-            var Allocations = new List<string>();
+            var Allocations = new List <string> ();
 
             if (nTot > nPeoples)
             {
-                Allocations.Add("Guest Limited..!!");
+                Allocations.Add("Guest Limited..!!"); 
                 return Allocations;
             }
 
@@ -29,8 +29,8 @@ namespace RoomsBookings
                 int nChildrenRoom = Math.Min(nChildren, nMaxGuests - nAdultsRoom);
 
                 Allocations.Add($"Room {nRoomAllocate + 1}: Adult = {nAdultsRoom}, Children = {nChildrenRoom}");
-                nAdults =nAdults - nAdultsRoom;
-                nChildren =nChildren - nChildrenRoom;
+                nAdults = nAdults - nAdultsRoom;
+                nChildren = nChildren - nChildrenRoom;
                 nRoomAllocate++;
             }
 
@@ -39,3 +39,5 @@ namespace RoomsBookings
         }
     }
 }
+
+
